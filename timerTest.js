@@ -1,17 +1,12 @@
+document.querySelector('.alert').style.display = 'none';
+
 let now = new Date();
-let giveAlert = true;
 // console.log(now);
 document.querySelector('.time-now').innerHTML = now;
 
-const endDate = new Date("March 4, 2021 15:02:00").getTime();
+const endDate = new Date("March 4, 2021 16:27:00").getTime();
 
-document.querySelector('.alert').style.display = 'none';
-
-const notify = () => {
-    alert('Reminder');
-    giveAlert = false;
-}
-
+let giveAlert = true;
 const timer = () => {
     const now = new Date().getTime();
     let diff = endDate - now;
@@ -21,7 +16,8 @@ const timer = () => {
         document.querySelector('.alert').style.display = 'block';
         document.querySelector('.container').style.display = 'none';
         if (giveAlert) {
-            notify();
+            alert('reminder');
+            giveAlert = false;
         }
     }
 
