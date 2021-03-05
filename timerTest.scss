@@ -22,7 +22,7 @@ body{
     justify-content: center;
 }
 .box{
-    background: rgb(18, 19, 18);
+    background:$box-background-color;
     width: 100px;
     height: 100px;
     margin: 0 15px;
@@ -30,7 +30,7 @@ body{
 h3{
     text-align: center;
     padding-top: 2px;
-    color: blanchedalmond;
+    color: $highlight-color;
     
 }
 .box h1{
@@ -39,7 +39,7 @@ h3{
     font-family: sans-serif;
     font-weight: 800;
     margin-bottom: 15px;
-    color: blanchedalmond;
+    color: $highlight-color;
 }
 .alert{
     display: none;
