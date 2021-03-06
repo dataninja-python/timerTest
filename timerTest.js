@@ -1,10 +1,11 @@
 document.querySelector('.alert').style.display = 'none';
 
 let now = new Date();
+let alertCount = 1;
 // console.log(now);
 document.querySelector('.time-now').innerHTML = now;
 
-const endDate = new Date("March 4, 2021 16:27:00").getTime();
+const endDate = new Date("March 5, 2021 20:59:00").getTime();
 
 let giveAlert = true;
 const timer = () => {
@@ -12,12 +13,13 @@ const timer = () => {
     let diff = endDate - now;
 
     // show alert @ end of timer
-    if(diff < 0) {
+    if(diff < 0 && alertCount > 0) {
         document.querySelector('.alert').style.display = 'block';
         document.querySelector('.container').style.display = 'none';
         if (giveAlert) {
             alert('reminder');
             giveAlert = false;
+            alertCount--;
         }
     }
 

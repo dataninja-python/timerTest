@@ -7,7 +7,10 @@ window.addEventListener('load', () => {
         sound.play();
         return false;
     }
+
+    let notifyBtn = document.getElementById('notify');
     // notifyButton.innerHTML = "No, Don't Notify Me";
-    // if () {} else if () {} else {}
-    
+    notifyBtn.onclick = () => {
+        
+    };
 });
